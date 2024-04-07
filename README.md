@@ -50,6 +50,16 @@ LLM模型优化方法比较：提示工程词 微调  RAG
   
 ![](./huixiangdou1.png)    
 
+#### 在 `Intern Studio` 服务器上部署茴香豆技术助手    
+##### 1.环境配置    
+1.1 配置基础环境    
+- 以intern Studio服务器上部署茴香豆为例。
+    - 创建开发机， 使用 `Cuda11.7-conda` 镜像, 30% A100.
+    - 从官方环境复制运行 InternLM 的基础环境，命名为 InternLM2_Huixiangdou，在命令行模式下运行：
+```
+studio-conda -o internlm-base -t InternLM2_Huixiangdou
+```
+
 
 
 
