@@ -221,7 +221,8 @@ python3 -m huixiangdou.main --standalone
 
 - 根据教程文档搭建 `茴香豆技术助手`，针对问题"茴香豆怎么部署到微信群？"进行提问
 - 完成不少于 400 字的笔记 + 截图
-
+  
+![](./huixiangdou1.png)    
 
 ### 进阶作业 - 二选一 
 
