@@ -63,10 +63,7 @@ studio-conda -o internlm-base -t InternLM2_Huixiangdou
 复制完成后，在本地查看环境。   
 ```
 conda env list
-```
-
-结果如下所示:   
-![](./huixiangdou2.png)     
+```   
 
 运行 *conda* 命令，激活 `ternLM2_Huixiangdou` *python* 虚拟环境:   
 ```
@@ -222,7 +219,7 @@ python3 -m huixiangdou.main --standalone
 - 根据教程文档搭建 `茴香豆技术助手`，针对问题"茴香豆怎么部署到微信群？"进行提问
 - 完成不少于 400 字的笔记 + 截图
   
-![](./huixiangdou1.png)    
+![](./huixiangdou3.png)    
 
 ### 进阶作业 - 二选一 
 
