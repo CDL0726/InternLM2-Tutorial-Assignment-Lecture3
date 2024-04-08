@@ -116,13 +116,81 @@ git checkout 447c6f7e68a1657fce1c4f7c740ea1700bde0440
 
 ##### 2 使用茴香豆搭建 RAG 助手
 
+2.1 修改配置文件  
 
+用已下载模型的路径替换 `/root/huixiangdou/config.ini` 文件中的默认模型，需要修改 3 处模型地址，分别是:
 
+命令行输入下面的命令，修改用于向量数据库和词嵌入的模型   
+```
+sed -i '6s#.*#embedding_model_path = "/root/models/bce-embedding-base_v1"#' /root/huixiangdou/config.ini
+```
 
+用于检索的重排序模型   
+```
+sed -i '7s#.*#reranker_model_path = "/root/models/bce-reranker-base_v1"#' /root/huixiangdou/config.ini
+```
 
+和本次选用的大模型    
+```
+sed -i '29s#.*#local_llm_path = "/root/models/internlm2-chat-7b"#' /root/huixiangdou/config.ini
+```
 
+**2.2 创建知识库**    
 
+使用 InternLM 的 Huixiangdou 文档作为新增知识数据检索来源，在不重新训练的情况下，打造一个 Huixiangdou 技术问答助手。   
 
+首先，下载 Huixiangdou 语料：    
+```
+cd /root/huixiangdou && mkdir repodir
+
+git clone https://github.com/internlm/huixiangdou --depth=1 repodir/huixiangdou
+```
+
+提取知识库特征，创建向量数据库。数据库向量化的过程应用到了 LangChain 的相关模块，默认嵌入和重排序模型调用的网易 BCE 双语模型，如果没有在 config.ini 文件中指定本地模型路径，茴香豆将自动从 HuggingFace 拉取默认模型。
+
+除了语料知识的向量数据库，茴香豆建立接受和拒答两个向量数据库，用来在检索的过程中更加精确的判断提问的相关性，这两个数据库的来源分别是：   
+
+- 接受问题列表，希望茴香豆助手回答的示例问题
+     - 存储在 huixiangdou/resource/good_questions.json 中
+- 拒绝问题列表，希望茴香豆助手拒答的示例问题
+     - 存储在 huixiangdou/resource/bad_questions.json 中
+     - 其中多为技术无关的主题或闲聊
+     - 如："nihui 是谁", "具体在哪些位置进行修改？", "你是谁？", "1+1"
+ 
+ 运行下面的命令，增加茴香豆相关的问题到接受问题示例中：   
+ ```
+cd /root/huixiangdou
+mv resource/good_questions.json resource/good_questions_bk.json
+echo '[
+    "mmpose中怎么调用mmyolo接口",
+    "mmpose实现姿态估计后怎么实现行为识别",
+...具体对话集...
+"remote_llm_model 可以填哪些模型?"
+]' > /root/huixiangdou/resource/good_questions.json
+```
+
+再创建一个测试用的问询列表，用来测试拒答流程是否起效：    
+```
+cd /root/huixiangdou
+
+echo '[
+"huixiangdou 是什么？",
+"你好，介绍下自己"
+]' > ./test_queries.json
+```
+
+在确定好语料来源后，运行下面的命令，创建 RAG 检索过程中使用的向量数据库：    
+```
+# 创建向量数据库存储目录
+cd /root/huixiangdou && mkdir workdir 
+
+# 分别向量化知识语料、接受问题和拒绝问题中后保存到 workdir
+python3 -m huixiangdou.service.feature_store --sample ./test_queries.json
+```
+
+向量数据库的创建需要等待一小段时间，过程约占用 1.6G 显存。   
+
+2.3 运行茴香豆知识助手
 
 
 
