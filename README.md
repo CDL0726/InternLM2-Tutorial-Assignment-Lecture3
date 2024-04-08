@@ -192,6 +192,19 @@ python3 -m huixiangdou.service.feature_store --sample ./test_queries.json
 
 2.3 运行茴香豆知识助手
 
+已经提取了知识库特征，并创建了对应的向量数据库。现在，让我们来测试一下效果：   
+
+命令行运行：   
+```
+# 填入问题
+sed -i '74s/.*/    queries = ["huixiangdou 是什么？", "茴香豆怎么部署到微信群", "今天天气怎么样？"]/' /root/huixiangdou/huixiangdou/main.py
+
+# 运行茴香豆
+cd /root/huixiangdou/
+python3 -m huixiangdou.main --standalone
+```
+
+
 
 
 
