@@ -226,7 +226,8 @@ python3 -m huixiangdou.main --standalone
   ![](./huixiangdou3.png)
   
 - 完成不少于 400 字的笔记 + 截图
- **笔记+截图 见上面具体记录** 
+  
+     **笔记+截图 见上面具体记录** 
   
 
 ### 进阶作业 - 二选一 
