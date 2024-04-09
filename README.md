@@ -212,6 +212,10 @@ python3 -m huixiangdou.main --standalone
 
 - 参考视频[零编程玩转大模型，学习茴香豆部署群聊助手](https://www.bilibili.com/video/BV1S2421N7mn)
 - 完成不少于 400 字的笔记 + 线上茴香豆助手对话截图(不少于5轮)
+
+![](./huixiangdou4.png)  
+![](./huixiangdou5.png)  
+  
 - （可选）参考 [代码](https://github.com/InternLM/HuixiangDou/tree/main/web) 在自己的服务器部署茴香豆 Web 版
 
 #### 2.在 `InternLM Studio` 上部署茴香豆技术助手
