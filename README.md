@@ -216,7 +216,8 @@ python3 -m huixiangdou.main --standalone
 - 完成不少于 400 字的笔记 + 线上茴香豆助手对话截图(不少于5轮)
 
 ![](./huixiangdou4.png)  
-![](./huixiangdou5.png)  
+![](./huixiangdou5.png)    
+![](./huixiangdou7.png) 
   
 - （可选）参考 [代码](https://github.com/InternLM/HuixiangDou/tree/main/web) 在自己的服务器部署茴香豆 Web 版
 
