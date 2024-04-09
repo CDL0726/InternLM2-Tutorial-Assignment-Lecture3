@@ -212,6 +212,7 @@ python3 -m huixiangdou.main --standalone
 
 - 参考视频[零编程玩转大模型，学习茴香豆部署群聊助手](https://www.bilibili.com/video/BV1S2421N7mn)
   ![](./huixiangdou6.png)
+  
 - 完成不少于 400 字的笔记 + 线上茴香豆助手对话截图(不少于5轮)
 
 ![](./huixiangdou4.png)  
@@ -222,9 +223,11 @@ python3 -m huixiangdou.main --standalone
 #### 2.在 `InternLM Studio` 上部署茴香豆技术助手
 
 - 根据教程文档搭建 `茴香豆技术助手`，针对问题"茴香豆怎么部署到微信群？"进行提问
-- 完成不少于 400 字的笔记 + 截图
+  ![](./huixiangdou3.png)
   
-![](./huixiangdou3.png)    
+- 完成不少于 400 字的笔记 + 截图
+ **笔记+截图 见上面具体记录** 
+  
 
 ### 进阶作业 - 二选一 
 
