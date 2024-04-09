@@ -211,6 +211,7 @@ python3 -m huixiangdou.main --standalone
 #### 1. 在[茴香豆 Web 版](https://openxlab.org.cn/apps/detail/tpoisonooo/huixiangdou-web)中创建自己领域的知识问答助手
 
 - 参考视频[零编程玩转大模型，学习茴香豆部署群聊助手](https://www.bilibili.com/video/BV1S2421N7mn)
+  ![](./huixiangdou6.png)
 - 完成不少于 400 字的笔记 + 线上茴香豆助手对话截图(不少于5轮)
 
 ![](./huixiangdou4.png)  
