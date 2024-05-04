@@ -205,10 +205,10 @@ python3 -m huixiangdou.main --standalone
 
 
 
-# 第3课 作业  
-## 基础作业 - 完成下面两个作业
+## 第3课 作业  
+### 基础作业 - 完成下面两个作业
 
-### 1. 在[茴香豆 Web 版](https://openxlab.org.cn/apps/detail/tpoisonooo/huixiangdou-web)中创建自己领域的知识问答助手
+#### 1. 在[茴香豆 Web 版](https://openxlab.org.cn/apps/detail/tpoisonooo/huixiangdou-web)中创建自己领域的知识问答助手
 
 - 参考视频[零编程玩转大模型，学习茴香豆部署群聊助手](https://www.bilibili.com/video/BV1S2421N7mn)
   ![](./huixiangdou6.png)
@@ -221,7 +221,7 @@ python3 -m huixiangdou.main --standalone
   
 - （可选）参考 [代码](https://github.com/InternLM/HuixiangDou/tree/main/web) 在自己的服务器部署茴香豆 Web 版
 
-### 2.在 `InternLM Studio` 上部署茴香豆技术助手
+#### 2.在 `InternLM Studio` 上部署茴香豆技术助手
 
 - 根据教程文档搭建 `茴香豆技术助手`，针对问题"茴香豆怎么部署到微信群？"进行提问
   ![](./huixiangdou3.png)
