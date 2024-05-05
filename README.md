@@ -205,15 +205,12 @@ python3 -m huixiangdou.main --standalone
 
 
 
-## 第3课 作业  
-### 基础作业 - 完成下面两个作业
+# 第3课 作业  
+## 基础作业 - 完成下面两个作业
 
-#### 1. 在[茴香豆 Web 版](https://openxlab.org.cn/apps/detail/tpoisonooo/huixiangdou-web)中创建自己领域的知识问答助手
+### 1. 在[茴香豆 Web 版](https://openxlab.org.cn/apps/detail/tpoisonooo/huixiangdou-web)中创建自己领域的知识问答助手
 
-- 参考视频[零编程玩转大模型，学习茴香豆部署群聊助手](https://www.bilibili.com/video/BV1S2421N7mn)
-
-   ![](./huixiangdou6.png)
-  
+- 参考视频[零编程玩转大模型，学习茴香豆部署群聊助手](https://www.bilibili.com/video/BV1S2421N7mn) 
 - 完成不少于 400 字的笔记 + 线上茴香豆助手对话截图(不少于5轮)
 
 ![](./huixiangdou4.png)  
@@ -222,13 +219,73 @@ python3 -m huixiangdou.main --standalone
   
 - （可选）参考 [代码](https://github.com/InternLM/HuixiangDou/tree/main/web) 在自己的服务器部署茴香豆 Web 版
 
-#### 2.在 `InternLM Studio` 上部署茴香豆技术助手
+### 2.在 `InternLM Studio` 上部署茴香豆技术助手
 
 - 根据教程文档搭建 `茴香豆技术助手`，针对问题"茴香豆怎么部署到微信群？"进行提问
   ![](./huixiangdou3.png)
+
+
+## 进阶作业 - 二选一    
+
+### A.【应用方向】 结合自己擅长的领域知识（游戏、法律、电子等）、专业背景，搭建个人工作助手或者垂直领域问答助手，参考茴香豆官方文档，部署到下列任一平台。
+
+- 飞书、微信
+- 可以使用 茴香豆 Web 版 或 InternLM Studio 云端服务器部署
+- 涵盖部署全过程的作业报告和个人助手问答截图
   
+[茴香豆零编程接入飞书](9https://aicarrier.feishu.cn/docx/H1AddcFCioR1DaxJklWcLxTDnEc)    
+
+#### 1. 搭建医疗保健领域问答助手
+   
+1.1 在茴香豆Web端添加医疗保健知识库：
+   ![](./huixiangdou6.png)    
+
+1.2 添加正反例问题：    
+  ![](./huixiangdou6.1.png) 
+  ![](./huixiangdou6.2.png) 
+  
+#### 2. 医疗保健助手接入飞书     
+
+2.1 进入飞[书开放平台](https://open.feishu.cn/app?lang=zh-CN)，创建企业自建应用.     
+
+2.1 添加机器人，作为群聊bot    
+
+ ![](./huixiangdou6.3.png)    
+
+ 2.3 复制基础信息-凭证与基础信息tab下，应用凭证中 App ID和App Secret，填入到 Integrate With Lark 的表单中    
+ 
+ ![](./huixiangdou6.4.png) 
+
+ 2.4 复制茴香豆Web中你的知识库下，Integrate With Lark 中提供的加密策略，填入到开发配置-事件与回调tab下的加密策略，注意两项都需要填入.    
+
+ ![](./huixiangdou6.5.png)     
+
+ 2.5 复制茴香豆Web中你的知识库下，Integrate With Lark 中提供的事件回调地址，填入到开发配置-事件与回调tab下的事件配置，选择默认的【将事件发送至开发者服务器】即可，点击保存后若修改成功，则表示鉴权成功。    
+
+ ![](./huixiangdou6.6.png) 
+
+2.6 订阅事件：继续点击当前页面的【添加事件】按钮，搜索【接收消息】事件，并申请开通对应权限    
+
+ ![](./huixiangdou6.7.png)     
+
+2.7  权限配置：点击开发配置-权限管理tab下，申请开通权限：im:chat:readonly 和 im:message:send_as_bot
+ 
+ ![](./huixiangdou6.8.png)      
+
+ 2.8 点击上方提示栏，发布当前应用版本，提示“已发布”后即配置成功。    
+
+ ![](./huixiangdou6.9.png)     
+
+ 2.9 将刚刚创建并发布的应用机器人添加到群聊中，参考在群组中使用机器人    
+
+ 2.10 8. 复制茴香豆Web中你的知识库下，Integrate With Lark 中提供的suffix字符串，在飞书群名称后直接添加该suffix    
+
+ 2.11 愉快交互！    
+
+  ![](./huixiangdou6.10.png)      
 
   
+
 
 
  
